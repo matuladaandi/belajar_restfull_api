@@ -12,12 +12,20 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Learn row and colum'),
         ),
-        body: Row(
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('text 1 '),
-            Text('text 2'),
-            Text('text 3')
+            Text('text 1 Colomn'),
+            Text('text 2 Colomn'),
+            Text('text 3 Colomn'),
+            Row(
+              children: <Widget>[
+                Text('text 4 Row'),
+                Text('text 5 Row'),
+                Text('text 6 Row')
+              ],
+            )
           ],
         ),
       ),
