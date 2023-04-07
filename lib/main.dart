@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Learn row and colum'),
         ),
-        body: Column(
+        body: Row(
           children: <Widget>[
             Text('text 1 '),
             Text('text 2'),
