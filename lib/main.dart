@@ -10,21 +10,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App Learn'),
+          title: Text('Learn row and colum'),
         ),
-        body: Center(
-            child: Container(
-                color: Colors.red.shade200,
-                width: 150,
-                height: 50,
-                child: Text(
-                  'saya sedang melatih kemampuan flutter saya secara otodidak',
-                  // textAlign: TextAlign.justify,
-                  style: TextStyle(
-                      color: Colors.white60,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w100, fontSize: 20),
-                ))),
+        body: Column(
+          children: <Widget>[
+            Text('text 1 '),
+            Text('text 2'),
+            Text('text 3')
+          ],
+        ),
       ),
     );
   }
