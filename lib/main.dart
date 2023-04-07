@@ -7,7 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('My App Learn'),
@@ -19,9 +19,11 @@ class MyApp extends StatelessWidget {
                 height: 50,
                 child: Text(
                   'saya sedang melatih kemampuan flutter saya secara otodidak',
-                  maxLines: 2,
-                  overflow: TextOverflow.clip ,
-                  softWrap: false,
+                  // textAlign: TextAlign.justify,
+                  style: TextStyle(
+                      color: Colors.white60,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w100, fontSize: 20),
                 ))),
       ),
     );
