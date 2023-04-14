@@ -12,9 +12,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Latihan Container"),
         ),
-        body: Container(color: Colors.red[200]),
+        body: Container(
+          color: Colors.red[200],
+          margin: EdgeInsets.all(10),
+          padding: EdgeInsets.all(20),
+          child: Container(color: Colors.blue),
+        ),
       ),
     );
   }
 }
-
