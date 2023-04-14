@@ -10,25 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Learn row and colum'),
+          title: Text("Latihan Container"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text('text 1 Colomn'),
-            Text('text 2 Colomn'),
-            Text('text 3 Colomn'),
-            Row(
-              children: <Widget>[
-                Text('text 4 Row'),
-                Text('text 5 Row'),
-                Text('text 6 Row')
-              ],
-            )
-          ],
-        ),
+        body: Container(color: Colors.red[200]),
       ),
     );
   }
 }
+
