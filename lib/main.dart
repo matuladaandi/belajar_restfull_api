@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
           margin: EdgeInsets.fromLTRB(10, 20, 10, 20),
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(20),
                 gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                     colors: <Color>[Colors.amber, Colors.blueAccent])),
             margin: EdgeInsets.all(10),
           ),
