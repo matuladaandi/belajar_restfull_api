@@ -1,0 +1,8 @@
+{
+    "cmake.autoSelectActiveFolder": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 0,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false
+}
