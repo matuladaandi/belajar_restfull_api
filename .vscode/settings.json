@@ -4,5 +4,6 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorStyle": "line",
     "editor.cursorSurroundingLines": 0,
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": false
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    "cmake.configureOnOpen": false
 }
