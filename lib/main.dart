@@ -11,12 +11,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<Widget> widgetsku = []; // membuat list
-
-_MyAppState(){
-  for(int i =0; i <= 40; i++){
-  widgetsku.add(Text("data ke- " + i.toString()));
-  }
-}
+  int counter = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +20,26 @@ _MyAppState(){
         appBar: AppBar(
           title: Text("Latihan ListView"),
         ),
-        body: ListView(children:<Widget>[
-          Row(
-            children: <Widget>[
-              
-            ],
-          )
-        ],
+        body: ListView(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceAround, // agar tdk mepet tombol hps&+
+              children: <Widget>[
+                ElevatedButton(onPressed: (){
+                  setState(() {
+                    widgetsku.add(Text("Data ke- "+ counter.toString()));
+                    counter++;   
+                  });
+                }, child: Text('Tambah Data')),
+                ElevatedButton(onPressed: null, child: Text('Hapus Data'))
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: widgetsku,
+            )
+          ],
         ),
       ),
     );
