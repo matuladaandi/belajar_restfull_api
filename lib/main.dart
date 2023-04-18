@@ -26,13 +26,20 @@ class _MyAppState extends State<MyApp> {
               mainAxisAlignment:
                   MainAxisAlignment.spaceAround, // agar tdk mepet tombol hps&+
               children: <Widget>[
-                ElevatedButton(onPressed: (){
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        widgetsku.add(Text("Data ke- " + counter.toString(),style: TextStyle(fontSize: 20),));
+                        counter++;
+                      });
+                    },
+                    child: Text('Tambah Data')),
+                ElevatedButton(onPressed: () {
                   setState(() {
-                    widgetsku.add(Text("Data ke- "+ counter.toString()));
-                    counter++;   
+                    widgetsku.removeLast();
+                    counter--;
                   });
-                }, child: Text('Tambah Data')),
-                ElevatedButton(onPressed: null, child: Text('Hapus Data'))
+                }, child: Text('Hapus Data'))
               ],
             ),
             Column(
