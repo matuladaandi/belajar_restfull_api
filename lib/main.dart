@@ -25,7 +25,14 @@ _MyAppState(){
         appBar: AppBar(
           title: Text("Latihan ListView"),
         ),
-        body: ListView(children:widgetsku,),
+        body: ListView(children:<Widget>[
+          Row(
+            children: <Widget>[
+              
+            ],
+          )
+        ],
+        ),
       ),
     );
   }
