@@ -1,4 +1,9 @@
 {
     "name" : "andi",
-    "age"  : 20
+    "age"  : 20,
+    "hobbies" : [
+        "coding",
+        "main game",
+        "makan"
+    ]
 }
