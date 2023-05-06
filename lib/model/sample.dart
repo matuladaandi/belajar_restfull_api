@@ -10,5 +10,7 @@ class Sample {
         age: json['age'] ?? '', 
     );
   }
-
+  @override
+  String toString() => 'Sample(name: $name, age: $age)';
+  
 }
