@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                 padding: EdgeInsets.all(16.0),
                 child: Text(
                   '$result',
-                  // '${result?.name}',  // knp ada ? karena dia nullable
+                  // '${result?.name}',  // knp ada ? karena dia nullable q
                   style: TextStyle(fontSize: 22.0),
                 ))
           ],
