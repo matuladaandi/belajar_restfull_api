@@ -1,61 +1,60 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_learn/model/sample.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();  
+}
+
+class _MyAppState extends State<MyApp> {
+  Sample? result; // membuat variabel yg nullable
+  // method utk simulasi
+  Future _loadJsonSample() async {
+    String jsonString = await rootBundle.loadString('assets/sample.json');
+    // prosess mapping Data,
+    final jsonData = jsonDecode(jsonString); // mengUbah json menjadi json data
+    Sample sample = Sample.fromJson(jsonData);
+    setState(() { // mengubah data dari widget stateful menjadi 
+      result = sample;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flexible Layout',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flexible Layout'),
+          title: Text('dasar parsing json'),
         ),
-        body: Row(
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              flex: 3,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      color: Colors.red,
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.green,
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
+            ElevatedButton(
+              onPressed: () async {
+                _loadJsonSample();
+              },
+              child: const Text('read json data'),
             ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Colors.yellow,
-              ),
+            const SizedBox(
+              height: 12.0,
             ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Colors.orange,
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Color.fromARGB(255, 7, 4, 0),
-              ),
-            ),
+             Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  '$result',
+                  style: TextStyle(fontSize: 22.0),
+                ))
           ],
-        ),
+        )),
       ),
     );
   }
