@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                 padding: EdgeInsets.all(16.0),
                 child: Text(
                   // '$result',
-                  '${result?.github}',  // knp ada ? karena dia nullable q
+                  '${result?.articles?.first}',  // knp ada ? karena dia nullable q
                   style: TextStyle(fontSize: 22.0),
                 ))
           ],

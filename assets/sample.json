@@ -10,5 +10,22 @@
         "username" : "@matulada",
         "repositories" : 521,
         "isGDE" : true
-    }
+    },
+    "articles" : [
+        {
+            "id" : 1,
+            "title" : "God Of War",
+            "subtitle" : "this is game"
+        },
+        {
+            "id" : 2,
+            "title" : "Good hand",
+            "subtitle" : "this is game"
+        },
+        {
+            "id" : 3,
+            "title" : "Harry Potter",
+            "subtitle" : "this movie"
+        }
+    ]
 }
